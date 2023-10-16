@@ -37,7 +37,7 @@ We are expecting you to do error handling for requests/functions. Be prepared to
 
 ### Make three pages using NextJS App Router format
 
-The designs for the pages can be found in [Figma file](https://www.figma.com/file/lUbwgHr7OTh4IEf1Y4szwf/NextJS-Ecommerce?node-id=0%3A1&t=bHXi1DmZpSYk17Wd-1) shared with you.
+The designs for the pages can be found in [Figma file](https://www.figma.com/file/1oS4R4LrkXxDfkS6unNYL6/Untitled).
 Implement a root layout and individual layout files where needed.
 
 Implement the designs, creating components where it makes sense and following best practice organization. Would be nice to see the managing of such elements like context, reducer, hooks.
