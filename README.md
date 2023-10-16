@@ -40,7 +40,7 @@ We are expecting you to do error handling for requests/functions. Be prepared to
 The designs for the pages can be found in [Figma file](https://www.figma.com/file/lUbwgHr7OTh4IEf1Y4szwf/NextJS-Ecommerce?node-id=0%3A1&t=bHXi1DmZpSYk17Wd-1) shared with you.
 Implement a root layout and individual layout files where needed.
 
-Implement the designs, creating components where it makes sense and following best practice organization.
+Implement the designs, creating components where it makes sense and following best practice organization. Would be nice to see the managing of such elements like context, reducer, hooks.
 
 - `/dashboard/list`
   Based on the List page design, develop a page that employs a top navigation bar layout, displaying a list of the user's post items in the main content area. Utilize SWR to fetch data on the client side from the mock API. While the data is loading, display a loading icon in place of the list.
