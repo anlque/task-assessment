@@ -32,7 +32,7 @@ and mock the following routes:
 - Getting a list of the posts
 - Getting details of an post from its ID
 
-Note: the endpooint `/posts/#ID#` doesn't contain a photo url, but you can use it from the route `/photos/#ID#` by use the same id.
+Note: the endpooint `/posts/#ID#` doesn't contain a photo url, but you can use it from the route `/photos/#ID#` with same id. The API may not contain all of the fields you need for the exercise, so feel free to create mock data for any missing field.
 
 We are expecting you to do error handling for requests/functions. Be prepared to get asked about the reasons why you decided to handle this way.
 
