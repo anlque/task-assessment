@@ -56,4 +56,9 @@ Implement the designs, creating components where it makes sense and following be
 - `/item/[id]`
   Following the Detail page design, create a page with the Catch-all Segment to show details of a certain item. This page can use either layout configuration (Route groups may be helpful) and does not need to contain all text content from the design. This page should be Server-Side Rendered with NextJS - load the items details from the API and pass it to the page.
 
-* Was inspired by Simplify team: [origin](https://github.com/SimplifyJobs/frontend-assessment)
+## Submission
+Send us a link to your forked repo and we'll run it locally.
+
+### Thank you
+
+💡 Inspired by Simplify team: [origin](https://github.com/SimplifyJobs/frontend-assessment)
