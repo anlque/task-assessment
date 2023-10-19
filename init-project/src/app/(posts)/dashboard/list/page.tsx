@@ -1,7 +1,7 @@
 'use client'
 
 import useSWR from 'swr'
-import { fetchPosts, fetchPagination } from '@/app/helpers/swrFetch';
+import { fetchPosts, fetchPagination } from '@/app/api/swrFetch';
 import { useCallback } from 'react';
 import Table from '@/app/components/Table/Table'
 import { ParamsContext,ParamsDispatchContext, SearchParamsOrder, SearchParamsSort } from './model/ParamsContext';
