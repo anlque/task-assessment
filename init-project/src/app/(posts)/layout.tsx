@@ -12,7 +12,7 @@ export default function PostsLayout({
       <div className="flex h-screen">
         <Sidebar />
         <main className="w-10/12">
-        {children}
+          {children}
         </main>   
       </div>
     )

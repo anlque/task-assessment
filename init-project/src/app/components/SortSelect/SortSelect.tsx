@@ -1,4 +1,4 @@
-import { SearchParamsSort } from "@/app/(posts)/dashboard/list/model/ParamsContext"
+import { SearchParamsSort } from "@/app/(posts)/dashboard/list/model/ListPostsContext"
 
 
 interface SortSelect {

@@ -22,7 +22,7 @@ export const navMap: navItem[] = [
 export const Sidebar = () => {
     const pathName = usePathname()
     
-    return <aside className="w-2/12 flex flex-col p-5 border-r border-gray-200 h-full">
+    return <aside className="w-2/12 flex flex-col p-5 border-r border-gray-200 h-full overflow-hidden">
             <h3 className="text-gray-300 mb-3">Dashboards</h3>
             <nav className="flex flex-col h-20 justify-around">
                 {navMap.map((navItem) => {

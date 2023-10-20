@@ -19,10 +19,12 @@
       }
     ],
     "baseUrl": ".", 
-    "paths": {
+    "paths": { 
       "@/*": ["./src/*"],
       "@/public/*": ["public/*"],
-      "@/helpers/*": ["src/app/helpers/*"]
+      "@/api/*": ["src/app/api/*"],
+      "@/hooks/*": ["src/app/hooks/*"],
+      "@/components/*": ["src/app/components/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

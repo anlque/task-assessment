@@ -1,4 +1,4 @@
-import { SearchParamsOrder } from "@/app/(posts)/dashboard/list/model/ParamsContext"
+import { SearchParamsOrder } from "@/app/(posts)/dashboard/list/model/ListPostsContext"
 import { useState } from "react"
 import OrderIcon from '@/public/orderIcon.svg'
 
