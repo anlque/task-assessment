@@ -33,21 +33,21 @@ export const Table = <T extends {}>(props: TableProps<T>) =>  {
                 {items.map((post: any) => (
                   <tr key={post.id}>
                     <td className="py-2 px-4 border-y border-t-gray-300 border-y-gray-100 w-1/12">
-                        <Link className='text-[#0000FF] underline underline-offset-4 decoration-[#0000FF] decoration-solid' href={''}>
+                        <Link className='text-[#0000FF] underline underline-offset-4 decoration-[#0000FF] decoration-solid' href={`/item/${post.id}`}>
                         #{post.id}
                       </Link>
                       </td>
                     <td className="py-2 px-4 border-y border-t-gray-300 border-y-gray-100 w-1/12">
-                      <p className='truncate whitespace-nowrap w-30 capitalize'>{post.user.name}</p>
+                      <p className='truncate whitespace-nowrap w-30'>{post.user.name}</p>
                       </td>
                     <td className="py-2 px-4 border-y border-t-gray-300 border-y-gray-100 w-2/12">
-                    <p className='truncate whitespace-nowrap w-28 capitalize'>{post.title}</p>
+                    <p className='truncate whitespace-nowrap w-28'>{post.title}</p>
                       </td>
                     <td className="py-2 px-4 border-y border-t-gray-300 border-y-gray-100 w-2/12">
-                    <p className='truncate whitespace-nowrap w-28 capitalize'>{post.description}</p>
+                    <p className='truncate whitespace-nowrap w-28'>{post.description}</p>
                     </td>
                     <td className="py-2 px-4 border-y border-t-gray-300 border-y-gray-100 w-2/12">
-                      <p className='truncate w-40 capitalize'>{post.body}</p>
+                      <p className='truncate w-40'>{post.body}</p>
                     </td>
                   </tr>
                 ))}
