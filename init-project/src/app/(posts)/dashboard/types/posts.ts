@@ -10,4 +10,5 @@ export interface Post {
   body: string;
   description: string;
   user: User;
+  image?: string;
 }

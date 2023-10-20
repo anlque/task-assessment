@@ -12,7 +12,7 @@ export const fetchPosts = async <T>([
     const apiUrl = new URL(url);
 
     apiUrl.searchParams.set("_limit", limit);
-    apiUrl.searchParams.set("_page", page);
+    apiUrl.searchParams.set("_page", `${page}`);
     apiUrl.searchParams.set("_sort", sort);
     apiUrl.searchParams.set("_order", order);
     apiUrl.searchParams.set("q", search);
@@ -50,16 +50,34 @@ export const fetchPagination = async <T>(url: string): Promise<T> => {
   }
 };
 
-export const getPost = async (id: string) => {
+export const getPost = async <T>(id: string): Promise<T> => {
   try {
-    const res = await fetch(`http://localhost:3000/posts/${id}?_expand=user`);
+    const response = await fetch(
+      `http://localhost:3000/posts/${id}?_expand=user`
+    );
 
-    if (!res.ok) {
+    if (!response.ok) {
       throw new Error("Failed to fetch data");
     }
 
-    return res.json();
+    return response.json() as Promise<T>;
   } catch (error) {
     console.error(error);
+    throw error;
+  }
+};
+
+export const plainFetcher = async <T>(url: string): Promise<T> => {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    return response.json() as Promise<T>;
+  } catch (error) {
+    console.error(error);
+    throw error;
   }
 };

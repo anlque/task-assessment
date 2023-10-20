@@ -1,52 +1,52 @@
-import { SearchParamsOrder } from "@/app/(posts)/dashboard/list/model/ListPostsContext"
-import { useState } from "react"
-import OrderIcon from '@/public/orderIcon.svg'
+import { SearchParamsOrder } from "@/app/(posts)/dashboard/types/params";
+import { useState } from "react";
+import OrderIcon from "@/public/orderIcon.svg";
 
 interface OrderSelectProps {
-    order: SearchParamsOrder
-    onSelect: (sortOrder: SearchParamsOrder) => void
+  className?: string;
+  order: SearchParamsOrder;
+  onSelect: (sortOrder: SearchParamsOrder) => void;
 }
 
-export const OrderSelect=(props: OrderSelectProps)=>{
-    const {order, onSelect} = props
+export const OrderSelect = (props: OrderSelectProps) => {
+  const { className, order, onSelect } = props;
 
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  
-    const toggleTooltip = () => {
-      setIsOpen(!isOpen);
-    };
-  
-    const handleOptionClick = (order: SearchParamsOrder) => {
-        onSelect(order);
-        setIsOpen(false);
-      };
+  const toggleTooltip = () => {
+    setIsOpen(!isOpen);
+  };
 
-    return  <div className="relative h-full flex">
-    <button 
-      onClick={toggleTooltip}
-    >
-      <OrderIcon />
-    </button>
+  const handleOptionClick = (order: SearchParamsOrder) => {
+    onSelect(order);
+    setIsOpen(false);
+  };
 
-    {isOpen && (
-      <div 
-        style={{ top: '100%', left: '50%', transform: 'translateX(-50%)' }}
-        className="absolute mt-4 w-48 bg-white border rounded shadow-xl"
-      >
-        <button 
-          onClick={() => handleOptionClick('asc')}
-          className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-gray-600"
+  return (
+    <div className={`relative h-full flex ${className}`}>
+      <button onClick={toggleTooltip}>
+        <OrderIcon />
+      </button>
+
+      {isOpen && (
+        <div
+          style={{ top: "100%", left: "50%", transform: "translateX(-50%)" }}
+          className="absolute mt-4 w-48 bg-white border rounded shadow-xl"
         >
-          Ascending
-        </button>
-        <button 
-          onClick={() => handleOptionClick('desc')}
-          className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-gray-600"
-        >
-          Descending
-        </button>
-      </div>
-    )}
-  </div>
-}
+          <button
+            onClick={() => handleOptionClick("asc")}
+            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-gray-600"
+          >
+            Ascending
+          </button>
+          <button
+            onClick={() => handleOptionClick("desc")}
+            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-gray-600"
+          >
+            Descending
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};

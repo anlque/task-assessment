@@ -7,7 +7,17 @@ const nextConfig = {
         });
       
         return config;
-      }
+      },
+      images: {
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'assets',
+            port: '',
+            pathname: '/http://localhost:3000/**',
+          },
+        ],
+      },
 }
 
 module.exports = nextConfig 

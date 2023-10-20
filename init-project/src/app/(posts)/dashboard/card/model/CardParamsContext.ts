@@ -4,7 +4,7 @@ import { PostsState, PostsDispatch } from "../../types/params";
 export const initialCardPostsState: PostsState = {
   params: {
     limit: "12",
-    page: "1",
+    page: 1,
     sort: "id",
     order: "asc",
     search: "",
