@@ -1,7 +1,7 @@
 'use client'
 
 import useSWR from 'swr'
-import { fetchPosts, fetchPagination } from '@/app/api/swrFetch';
+import { fetchPosts, fetchPagination } from '@/app/api/fetchData';
 import { useCallback } from 'react';
 import Table from '@/app/components/Table/Table'
 import { ParamsContext,ParamsDispatchContext, SearchParamsOrder, SearchParamsSort } from './model/ParamsContext';
@@ -45,6 +45,7 @@ export default function Page() {
       order: order
     })
   },[])
+
   const onSetSearch = useCallback((search: string)=>{
     dispatch({
       type: 'SET_SEARCH',
@@ -55,12 +56,12 @@ export default function Page() {
   const debounceSearch = useDebounce(onSetSearch, 500);
 
 
-const onSetPage = useCallback((page: string)=>{
-    dispatch({
-      type: 'SET_PAGE',
-      page: page
-    })
-  },[])
+  const onSetPage = useCallback((page: string)=>{
+      dispatch({
+        type: 'SET_PAGE',
+        page: page
+      })
+    },[])
 
 
     return <ParamsContext.Provider value={params}>

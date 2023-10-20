@@ -1,9 +1,9 @@
 import { SearchParams } from "../(posts)/dashboard/list/model/ParamsContext";
 
-type swrFetchArgs = [ url: string, params: SearchParams, expand: string]
+type fetchPostsArgs = [ url: string, params: SearchParams, expand: string]
    
 export const fetchPosts = async <T>(
-    [url, params, expand]: swrFetchArgs
+    [url, params, expand]: fetchPostsArgs
     ): Promise<T> => {
         
     const {limit, page, sort, order, search} = params
